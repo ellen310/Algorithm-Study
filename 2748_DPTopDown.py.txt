@@ -1,0 +1,14 @@
+n = int(input())
+DP = [0]*(n+1)
+
+DP[0] = 0
+DP[1] = 1
+
+def fib(num):
+  if num==0 or num==1: return DP[num]
+  elif DP[num]==0: DP[num]=fib(num-1)+fib(num-2)
+
+  return DP[num]
+
+print(fib(n))
+
